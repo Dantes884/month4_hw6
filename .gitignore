@@ -1,0 +1,7 @@
+.gitignore
+.env
+.idea
+venv
+__pycache__/
+month4_hw6.__pycache__/
+parsing.__pycache__/
