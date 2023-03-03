@@ -29,11 +29,7 @@ def get_data(html):
                     'title_text': item.find('div', class_='media-heading title').get_text(),
                     'release_date': item.find('div', class_='meta-info').find('b').text,
                     'image': item.find('div', class_='gp-game-cover').find('img').get('src'),
-                    'rating': item.find('div', class_='game-rating-points').find(
-                        'span', class_='readers game-rating-item'
-                    ).find(
-                        'span', class_='value js-game-rating-value'
-                    ).text,
+                    'rating': item.find('span', class_='value js-game-rating-value').text,
                     'genre': item.find('div', class_='meta-info').find('a').get_text(),
                 })
         except AttributeError:
